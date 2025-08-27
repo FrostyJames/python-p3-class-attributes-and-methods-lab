@@ -28,7 +28,22 @@ class Song:
         if cls.genres is None:
             cls.genres = []
         if cls.genre not in cls.genres:
-            cls.genres.append(cls.genre 
+            cls.genres.append(cls.genre)
+
+    @classmethod
+    def add_to_artists(cls):
+        if cls.artists is None:
+            cls.artists = []
+        if cls.artist not in cls.artists:
+            cls.artists.append(cls.artist)
+
+    @classmethod
+    def add_to_genre_count(cls):
+        if cls.genre in cls.genre_count:
+            cls.genre_count[cls.genre] += 1
+        else:
+            cls.genre_count[cls.genre] = 1
+
 
 
 
