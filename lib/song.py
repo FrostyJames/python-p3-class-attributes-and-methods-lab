@@ -19,7 +19,16 @@ class Song:
 
     def __repr__(self):
         return f"<Song: {self.name} by {self.artist} ({self.genre})>"
+    @classmethod
+    def add_song_to_count(cls):
+        cls.count += 1
 
+    @classmethod
+    def add_to_genres(cls):
+        if cls.genres is None:
+            cls.genres = []
+        if cls.genre not in cls.genres:
+            cls.genres.append(cls.genre 
 
 
 
